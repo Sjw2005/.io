@@ -1,0 +1,58 @@
+
+# favicon 网站图标
+favicon: /img/favicon.ico
+
+# rss
+rss: /atom.xml
+
+# main menu navigation 你还可以添加自己的页面
+menu:
+  Home: / || 主页 
+  Tags: /tags/ || 标签 
+  categories: /categories/ || 类别
+  Archives: /archives/ || 档案馆
+  About: /about/ || 关于
+# pagename: /dir/ || 在博客菜单栏显示的名称
+
+bio:
+  所有的伟大都源自一个勇敢的开始.
+
+page_404:
+  enable: true
+  subtitle: 'Oops! Page not found.'
+
+comments:
+  enable: false
+  type: waline # waline | valine 
+  button: true
+
+#Waline https://waline.js.org
+waline:
+  serverURL: # your waline serverURLs
+  avatarCDN: # default is https://sdn.geekzu.org/avatar/
+  avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
+  placeholder: 'Let me know what you think！'
+
+valine:
+  appid: # leancloud application app id
+  appkey: # leancloud application app key
+  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
+  verify: false # Verification code
+  placeholder: Just go go # comment box placeholder
+  avatar: mm # gravatar style
+  guest_info: nick,mail,link # custom comment header
+  pageSize: 10 # pagination size
+  recordIP: false # record IP
+  serverURLs: # your serverURLs
+  emojiCDN: # emoji CDN
+  enableQQ: true
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/main.css
+
+
+# scripts loaded in the end of the body
+scripts:
+- /js/main.js
+
