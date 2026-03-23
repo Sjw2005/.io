@@ -6,7 +6,7 @@ body {
   background: 
   /* 使用 linear-gradient 和背景图结合 */
   linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
-  url('/img/fuji.png');
+  url('/img/girlkni.png');
 }
 
 body[data-theme=dark] {
@@ -14,7 +14,7 @@ body[data-theme=dark] {
   background: 
   /* 使用 linear-gradient 和背景图结合 */
   linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
-  url('/img/fuji.png');/*图片路径，请将图片存放至主题文件夹下的source/img */
+  url('/img/girlkni.png');/*图片路径，请将图片存放至主题文件夹下的source/img */
 }
 /*----以上 在此处修改背景图片，可为明暗模式设置不同的背景图片----*/
 
