@@ -277,7 +277,7 @@ blockquote > :last-child {
 }
 
 .wrapper {
-  max-width: calc(720px - 30px * 2);
+  max-width: 80%; /* 或者使用 90% 以适应更多屏幕 */
   position: relative;
   margin-right: auto;
   margin-left: auto;
@@ -361,9 +361,7 @@ mark,
 }
 
 .navbar {
-  height: auto;
-  max-width: calc(890px - 30px * 2);
-  max-width: -webkit-calc(890px - (30px * 2));
+  max-width: 80%; /* 建议与 wrapper 保持一致 */
   position: relative;
   margin-right: auto;
   margin-left: auto;
