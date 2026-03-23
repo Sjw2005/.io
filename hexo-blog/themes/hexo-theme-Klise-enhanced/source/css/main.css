@@ -1814,4 +1814,18 @@ body.loaded {
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 1rem;
 }
+
+/* 在 main.css 末尾修改或添加 */
+.wrapper.post {
+  backdrop-filter: blur(15px); /* 保持现有的毛玻璃模糊 */
+  background-color: rgba(255, 255, 255, 0.5); /* 为文章区域添加一个半透明白底，使其更易读 */
+  padding: 40px; /* 增加内边距让文字不贴边 */
+  border-radius: 8px; /* 圆角看起来更柔和 */
+  transition: all 1s ease-in-out;
+}
+
+/* 暗黑模式下的文章背景 */
+body[data-theme=dark] .wrapper.post {
+  background-color: rgba(0, 0, 0, 0.6); /* 暗黑模式下使用半透明黑底 */
+}
 /*----------------------------------以上分类页面分列----------------------------*/
