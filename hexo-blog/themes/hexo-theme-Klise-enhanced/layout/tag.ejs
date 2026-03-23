@@ -1,0 +1,16 @@
+
+<div class="wrapper">
+  <div class="page-content">
+      <header class="header">
+        <h1 class="header-title center">含有标签“<%=page.tag%>”的文章</h1>
+      </header>
+      <% var last_year = ''; %>
+      <% page.posts.each(article => { %>
+        <div class="post-item">
+          <a class="post-item-title"  href="<%=url_for(article.path)%>">
+            <%=article.title%>
+          </a>
+        </div>
+      <% }) %>
+    </div>
+</div>

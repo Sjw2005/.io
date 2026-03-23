@@ -1,0 +1,13 @@
+
+<script type="text/javascript" charset="utf-8" src="<%- url_for('/js/tagcloud.js') %>"></script>
+<script type="text/javascript" charset="utf-8" src="<%- url_for('/js/tagcanvas.js') %>"></script>
+<div class="wrapper">
+    <div class="page-content">
+    <header class="header">
+      <h1 class="header-title center">Tags</h1>
+    </header>
+    <div class="tags-container">
+        <%- tagcloud({min_font: 14, max_font: 18, amount: 200, color: true, start_color: '#c6911b', end_color: '#ca2e14'}) %>
+    </div>
+    </div>
+</div>

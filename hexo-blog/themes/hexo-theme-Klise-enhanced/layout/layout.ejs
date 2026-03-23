@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="<%=config.language%>">
+<head>
+  <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Bold/result.css' />
+  <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/jhlst/dist/%E4%BA%AC%E8%8F%AF%E8%80%81%E5%AE%8B%E4%BD%93v2_002/result.css' />  
+  <%-partial('partials/head')%>
+
+<script defer>
+  document.addEventListener('visibilitychange', function () {
+  if (document.visibilityState == 'hidden') {
+      normal_title = document.title;
+      document.title = '点一下';
+  } else document.title = normal_title;
+});
+
+</script>
+  <body data-theme="light" class="notransition">
+    <script defer>
+      const body = document.body;
+      const data = body.getAttribute("data-theme");
+      const initTheme = (state) => {
+        if (state === "dark") {
+          body.setAttribute("data-theme", "dark");
+        } else if (state === "light") {
+          body.removeAttribute("data-theme");
+        } else {
+          localStorage.setItem("theme", data);
+        }
+      };
+   
+      initTheme(localStorage.getItem("theme"));
+      
+      setTimeout(() => body.classList.remove("notransition"), 75);
+    </script>
+  <%-partial('partials/header')%>
+  <%- body %>
+  <%-partial('partials/foot')%>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  document.body.classList.add('loaded');
+});
+
+  </script>
+</body>
+</html>
