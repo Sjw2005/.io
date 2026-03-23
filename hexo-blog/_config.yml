@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Hoshino's Blog
 subtitle: ''
 description: ''
 keywords:
@@ -21,7 +21,7 @@ pretty_urls:
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
-source_dir: source
+source_dir: docs
 public_dir: public
 tag_dir: tags
 archive_dir: archives
@@ -31,7 +31,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :category/:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -54,6 +54,29 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
+
+# Markdown-it-plus 配置
+markdown_it_plus:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - name: markdown-it-ins
+      enable: true
+    - name: markdown-it-sub
+      enable: true
+    - name: markdown-it-sup
+      enable: true
+    - name: markdown-it-emoji
+      enable: true
+    - name: markdown-it-mark
+      enable: true
+    - name: markdown-it-spoiler # 对应你 CSS 中的防剧透样式
+      enable: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
